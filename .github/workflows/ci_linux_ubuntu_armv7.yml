@@ -78,7 +78,7 @@ jobs:
                   ## sleep 5s
                   ## ./mayo --runtests
         - name: Upload Build Artifact
-          uses: actions/upload-artifact@v2
+          uses: actions/upload-artifact@v3
           with:
               name: mayo-build-${{ matrix.arch }}
               path: build/  # 假设构建产物在 build/ 目录下，根据实际情况调整
