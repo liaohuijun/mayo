@@ -77,3 +77,9 @@ jobs:
                   ## Xvfb $DISPLAY -screen 0 1280x1024x24 &
                   ## sleep 5s
                   ## ./mayo --runtests
+        - name: Upload Build Artifact
+          uses: actions/upload-artifact@v2
+          with:
+              name: mayo-build-${{ matrix.arch }}
+              path: build/  # 假设构建产物在 build/ 目录下，根据实际情况调整
+              retention-days: 7  # 可选：设置保留天数
